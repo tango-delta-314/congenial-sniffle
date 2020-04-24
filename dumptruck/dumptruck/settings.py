@@ -25,7 +25,7 @@ SECRET_KEY = '1pe5fn5d$d__c=5yhlh1v51e%egw!+$#1_q8o_diembv(wu=%4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['34.210.52.215','ec2-34-210-52-215.us-west-2.compute.amazonaws.com','44.233.52.245']
 
 
 # Application definition
@@ -121,5 +121,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-CELERY_BROKER_URL = 'amqp://localhost'
+#CELERY_BROKER_URL = 'amqp://localhost'
+CELERY_BROKER_URL = 'amqp://myuser:mypassword@44.233.52.245:5672/myvhost'
 CELERY_RESULT_BACKEND = 'rpc://'
